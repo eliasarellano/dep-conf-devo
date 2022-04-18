@@ -50,4 +50,4 @@ jobs:
       - name: Run a simple command line
         run: |
           docker pull harryelias/test-devo-conf:preprod
-          docker run -d -p 5013:80 harryelias/test-devo-conf:preprod
+          docker run -d -p 5016:80 harryelias/test-devo-conf:preprod

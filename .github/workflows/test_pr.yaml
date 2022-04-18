@@ -1,8 +1,8 @@
-name: Deploy-In-Production
+name: Test-in-PullRequest-preprod
 
 on:
   pull_request:
-    types: [closed]
+    types: [opened]
 jobs:
   super-lint:
     name: Lint code base
@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:preprod
+          tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:website6
   Deploy-final:
     needs: super-lint
     name: Deployment end
@@ -49,5 +49,5 @@ jobs:
         run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
       - name: Run a simple command line
         run: |
-          docker pull harryelias/test-devo-conf:preprod
-          docker run -d -p 5013:80 harryelias/test-devo-conf:preprod
+          docker pull harryelias/test-devo-conf:website6
+          docker run -d -p 5014:80 harryelias/test-devo-conf:website6

@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:preprod
+          tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:devoweb3
   Deploy-final:
     needs: super-lint
     name: Deployment end
@@ -49,5 +49,5 @@ jobs:
         run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
       - name: Run a simple command line
         run: |
-          docker pull harryelias/test-devo-conf:preprod
-          docker run -d -p 5016:80 harryelias/test-devo-conf:preprod
+          docker pull harryelias/test-devo-conf:devoweb3
+          docker run -d -p 5040:80 harryelias/test-devo-conf:devoweb3

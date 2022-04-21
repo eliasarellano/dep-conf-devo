@@ -1,7 +1,7 @@
 <?php
 echo "Hello DevoTeamers ";
 echo "<br>"; 
-echo "Here we do the following tasks for Continuous Integration test-pr";
+echo "Here we do the following tasks for Continuous Integration test-build";
 echo "<br>";
 echo "1- Testing"; 
 echo "<br>";

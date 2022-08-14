@@ -1,4 +1,4 @@
-# name: Test-in-PullRequest-preprod
+# name: PullRequest-preprod
 
 # on:
 #   pull_request:

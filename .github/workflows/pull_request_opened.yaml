@@ -2,7 +2,7 @@ name: PullRequest-Opened
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened,push]
 
 jobs:
   super-lint:

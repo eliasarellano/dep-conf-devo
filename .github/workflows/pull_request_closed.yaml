@@ -39,3 +39,16 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:product
+  Deploy-final:
+    needs: super-lint
+    name: Deployment end
+    runs-on: self-hosted
+    steps:
+      - name: Actor
+        run: echo "${{ github.actor }}"
+      - name: Connection to docker
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
+      - name: Run a simple command line
+        run: |
+          docker pull harryelias/test-devo-conf:product
+          docker run -d -P harryelias/test-devo-conf:product

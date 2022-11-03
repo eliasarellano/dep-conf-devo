@@ -3,10 +3,5 @@ echo "Hello DevoTeamers ";
 echo "<br>"; 
 echo "Here we finished the CI/CD explaination";
 echo "<br>";
-echo "1- Testing"; 
-echo "<br>";
-echo "2- Building"; 
-echo "<br>";
-echo "3- Testing"; 
-echo "<br>";
+echo "1- Testing";
 ?>

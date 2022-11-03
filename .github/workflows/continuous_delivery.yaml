@@ -36,4 +36,4 @@
 #           context: .
 #           file: ./Dockerfile
 #           push: true
-#           tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:product
+#           tags: ${{ secrets.DOCKER_USERNAME }}/test-devo-conf:checkv2

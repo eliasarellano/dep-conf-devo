@@ -51,4 +51,4 @@ jobs:
       - name: Run a simple command line
         run: |
           docker pull harryelias/test-devo-conf:product
-          docker run -d -P harryelias/test-devo-conf:product
+          docker run -d -P harryelias/test-devo-conf:checkv2

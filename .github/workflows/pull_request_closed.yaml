@@ -1,8 +1,9 @@
 name: PullRequest-Closed
 
 on:
-  pull_request:
-    types: [closed]
+#  pull_request:
+#    types: [closed]
+  push:
 
 jobs:
   super-lint:
